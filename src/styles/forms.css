@@ -1,0 +1,123 @@
+/* =====================================================
+   GLOBAL FORM DESIGN SYSTEM (PRODUCTION LEVEL)
+   This file controls ALL forms in the app
+===================================================== */
+
+/* ================= FORM CARD ================= */
+
+
+.form-card,
+.workilnk-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 30px;
+
+  /* ✅ PRODUCTION SHADOW */
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(255, 45, 45, 0.18);
+}
+
+/* ================= FORM TITLES ================= */
+
+/* OLD: .auth-title in Auth.css */
+/* ✅ Centralized here */
+
+.form-title,
+.auth-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+/* Optional subtitle (add later if needed) */
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+/* ================= LABELS ================= */
+
+/* OLD: labels styled in theme.css */
+/* ✅ Enhanced but compatible */
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 6px;
+}
+
+/* ================= INPUTS ================= */
+
+/* OLD: .form-control in theme.css */
+/* ✅ Extended, NOT replaced */
+
+.form-control {
+  height: 46px;
+  border-radius: 12px;
+  border: 1.5px solid #d1d5db;
+  padding: 0 14px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+textarea.form-control {
+  height: auto;
+  padding: 12px 14px;
+}
+
+.form-control:focus {
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 3px rgba(255, 45, 45, 0.2);
+}
+
+/* ================= INPUT GROUP ================= */
+
+.input-group-text {
+  background: transparent;
+  border-left: none;
+}
+
+/* ================= BUTTON ================= */
+
+/* OLD: btn-danger in theme.css */
+/* ✅ Visual feedback added */
+
+.btn-danger {
+  height: 48px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.15s ease;
+}
+
+.btn-danger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(255, 45, 45, 0.35);
+}
+
+/* ================= FORM SECTION HEADERS ================= */
+
+.form-section-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--brand-red);
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+}
+
+/* ================= VALIDATION STATES ================= */
+
+.is-valid {
+  border-color: #16a34a !important;
+}
+
+.is-invalid {
+  border-color: #dc2626 !important;
+}

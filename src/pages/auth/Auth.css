@@ -1,0 +1,40 @@
+/* ❌ REMOVE – NOW HANDLED BY forms.css
+.auth-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow:
+    14px 0 45px rgba(220, 38, 38, 0.45),
+    0 35px 80px rgba(0, 0, 0, 0.75),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+*/
+
+/* ❌ REMOVE – centralized
+.auth-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 22px;
+}
+*/
+/* ================= PASSWORD EYE ================= */
+
+.password-eye {
+  cursor: pointer;
+  background: transparent;
+  border-left: none;
+}
+
+/* ================= PASSWORD MATCH ================= */
+
+.password-status-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  font-weight: 800;
+  pointer-events: none;
+}

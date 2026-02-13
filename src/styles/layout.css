@@ -1,0 +1,47 @@
+/* ================= LAYOUT ================= */
+
+:root {
+  --navbar-height: 90px;
+  --form-width: 380px;
+  --profile-width: 480px;
+}
+
+/* All pages below navbar */
+.with-navbar {
+  padding-top: calc(var(--navbar-height) + 30px);
+  min-height: calc(100vh - var(--navbar-height));
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Common center wrapper */
+.page-center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Signup / Login / Auth cards */
+.form-card {
+  width: var(--form-width);
+}
+
+/* Profile page card (slightly wider) */
+.profile-card {
+  width: 550px;
+}
+
+/* Page content spacing */
+.page-content {
+  padding-bottom: 80px;
+}
+
+/* Alerts below navbar (GLOBAL FIX) */
+.swal2-container,
+.toast-container,
+.alert-container {
+  margin-top: var(--navbar-height);
+  z-index: 99999;
+}

@@ -1,0 +1,123 @@
+/* ================= GLOBAL THEME ================= */
+
+/* HERO TEXT */
+h1, h2 {
+  color: #f9fafb;
+  font-weight: 800;
+}
+
+p {
+  color: #d1d5db;
+}
+
+/* ================= FORM LABELS ================= */
+label {
+  color: rgb(253, 0, 0);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* ================= INPUTS ================= */
+.form-control {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  font-size: 14px;
+  color: #111827;
+}
+
+.form-control::placeholder {
+  color: #242121;
+}
+
+.form-control:focus {
+  border-color: #ff2d2d;
+  box-shadow: none;
+}
+
+/* ================= BUTTON ================= */
+.btn-danger {
+  background: linear-gradient(90deg, #ff2d2d, #b91c1c);
+  border: none;
+  border-radius: 16px;
+  padding: 14px;
+  font-weight: 700;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(90deg, #dc2626, #991b1b);
+}
+
+/* ================= ALERT ================= */
+.alert {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#dc2626, #7f1d1d);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f10;
+}
+
+:root {
+  --brand-red: #ff2d2d;
+}
+
+
+/* ===============================
+   FIX: Category hover / focus bg
+================================ */
+
+/* Main control - default */
+.rs__control {
+  background-color: #ffffff !important;
+}
+
+/* Hover */
+.rs__control:hover {
+  background-color: #ffffff !important;
+}
+
+/* Focus */
+.rs__control--is-focused {
+  background-color: #ffffff !important;
+}
+
+/* Selected value text */
+.rs__single-value {
+  color: #111 !important;
+}
+
+/* Placeholder text */
+.rs__placeholder {
+  color: #9ca3af !important;
+}
+
+/* Dropdown indicator (arrow) */
+.rs__dropdown-indicator {
+  color: #111 !important;
+}
+
+.rs__dropdown-indicator:hover {
+  color: #111 !important;
+}
+
+/* Remove blue outline */
+.rs__control--is-focused {
+  box-shadow: none !important;
+  border-color: #e10600 !important;
+}
+
+
+
+

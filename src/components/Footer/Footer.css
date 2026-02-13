@@ -1,0 +1,29 @@
+.footer {
+  background: #0f0f0f;
+  padding: 50px 20px;
+  color: #cccccc;
+  text-align: center;
+}
+
+.footer-content h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links span {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #888888;
+}

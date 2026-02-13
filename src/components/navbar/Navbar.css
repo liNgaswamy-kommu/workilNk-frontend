@@ -1,0 +1,83 @@
+.app-navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  background: linear-gradient(90deg, #0f0f10, #18181b);
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.8),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff2d2d,
+    transparent
+  );
+}
+
+.brand-logo {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-weight: 1200;
+  color: #ff2d2d !important;
+}
+
+.nav-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* ================= NAVBAR BUTTON SIZE FIX ================= */
+
+.navbar .btn {
+  height: 36px;                 /* 🔥 same as search */
+  padding: 0 18px;              /* 🔥 same horizontal space */
+  font-size: 14px;              /* 🔥 same text size */
+  font-weight: 600;
+  border-radius: 12px;          /* 🔥 same curve */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* outline login button */
+.navbar .btn-outline-danger {
+  border-width: 1.5px;
+}
+
+/* signup red button */
+.navbar .btn-danger {
+  padding: 0 20px;              /* slight emphasis like Search */
+}
+
+.navbar-brand{
+  margin-left: 37px;
+}
+
+/* WorkiLnk Logo in Navbar */
+.nav-logo {
+  height: 42px;        /* 🔥 bigger & premium */
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+
