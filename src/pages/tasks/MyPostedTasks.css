@@ -11,9 +11,8 @@
 }
 
 /* =========================
-   MAIN CARD (FIXED SIZE)
+   MAIN CARD
 ========================= */
-/* MAIN CARD */
 .mytasks-card {
   width: 75%;
   max-width: 1200px;
@@ -21,22 +20,31 @@
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 25px 60px rgba(0,0,0,0.35);
-
   display: flex;
   flex-direction: column;
   overflow: hidden;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 .mytasks-header {
   height: 64px;
   display: flex;
   align-items: center;
-  padding-left: 24px;
   border-bottom: 1px solid #eee;
 }
 
-/* BODY */
+.panel-title {
+  margin-left: 24px;
+  color: #bb0202;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   BODY LAYOUT
+========================= */
 .mytasks-body {
   flex: 1;
   display: grid;
@@ -44,47 +52,32 @@
   overflow: hidden;
 }
 
-/* LEFT */
+/* =========================
+   LEFT PANEL
+========================= */
 .mytasks-left {
   border-right: 1px solid #e5e5e5;
   padding: 16px;
-  overflow: hidden;   /* ❗ outer scroll off */
+  overflow: hidden;
 }
 
-/* ONLY LIST SCROLLS */
 .task-scroll {
-  max-height: 380px;   /* ✅ ~4 cards only */
+  max-height: 380px;
   overflow-y: auto;
   padding-right: 6px;
 }
 
 /* =========================
-   RIGHT PANEL (NO SCROLL)
-========================= */
-.mytasks-right {
-  padding: 24px;
-  overflow: hidden;     /* ✅ no scrollbar */
-}
-
-
-
-/* =========================
    TASK ITEM
 ========================= */
 .task-item {
-  border: 1px solid #eaeaea;
+  border: 2px solid rgb(182, 218, 247);
   border-radius: 14px;
   padding: 14px;
   margin-bottom: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
   background: #d9e0e4;
-  border-color: rgb(182, 218, 247);
-  border-width: 2px;
-}
-
-.task-item:hover {
-  border-color: #ffcccc;
+  transition: all 0.2s ease;
 }
 
 .task-item.active {
@@ -92,33 +85,35 @@
   background: #fff5f5;
 }
 
-/* Title */
 .task-item h4 {
   font-size: 15px;
   font-weight: 600;
-  color: #111;
   margin-bottom: 6px;
-
+  color: black;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Category */
 .task-item .category {
   font-size: 12px;
   color: #666;
-  margin-bottom: 6px;
 }
 
-/* Status */
 .task-item .status {
   font-size: 11px;
   font-weight: 700;
   color: #ff0000;
 }
 
-
+/* =========================
+   RIGHT PANEL (🔥 FULL SCROLL HERE)
+========================= */
+.mytasks-right {
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;   /* ✅ THIS IS THE KEY */
+}
 
 /* =========================
    TASK DETAILS
@@ -126,25 +121,18 @@
 .mytasks-right h2 {
   font-size: 20px;
   font-weight: 700;
-  color: #111;
   margin-bottom: 6px;
-
-  max-height: 52px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
 }
 
-/* Category */
 .task-category {
   font-size: 13px;
   color: #666;
   margin-bottom: 14px;
 }
 
-/* Status pills */
+/* =========================
+   STATUS PILLS
+========================= */
 .task-status-bar {
   display: flex;
   gap: 10px;
@@ -160,67 +148,73 @@
   color: #555;
 }
 
-.status-pill.active {
-  background: #ff0000;
-  color: #ffffff;
+.status-pill.active.posted {
+  background: #fee2e2;
+  color: #991b1b;
 }
 
-/* Description */
+.status-pill.active.applied {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.active.accepted {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-pill.active.completed {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
 .task-description {
   font-size: 14px;
-  color: #222;
   line-height: 1.6;
-
-  max-height: 120px;
-  overflow-y: auto;
-  padding-right: 6px;
-
   margin-bottom: 24px;
+  color: black;
+  font-weight: 500;
 }
 
-/* Meta info */
+/* =========================
+   META INFO
+========================= */
 .task-meta {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin-bottom: 24px;
+  color: black;
 }
 
 .task-meta label {
   font-size: 12px;
-  color: #666;
-  margin-bottom: 4px;
+  color: red;
+  font-weight: 600;
   display: block;
 }
 
-.task-meta div {
-  font-size: 14px;
-  font-weight: 600;
-  color: #111;
+/* =========================
+   APPLICATIONS LIST (PART OF SAME SCROLL)
+========================= */
+.applications-list {
+  margin-top: 12px;
 }
 
 /* =========================
    SCROLLBAR POLISH
 ========================= */
-/* =========================
-   LEFT SCROLLBAR (THEME)
-========================= */
-.task-scroll::-webkit-scrollbar {
-  width: 6px;
+.mytasks-right::-webkit-scrollbar {
+  width: 8px;
 }
 
-.task-scroll::-webkit-scrollbar-track {
-  background: transparent;
+.mytasks-right::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 6px;
 }
-
-.task-scroll::-webkit-scrollbar-thumb {
-  background: #ff0000;     /* 🔥 theme red */
-  border-radius: 10px;
-}
-
-.task-scroll::-webkit-scrollbar-thumb:hover {
-  background: #cc0000;
-}
-
 
 /* =========================
    MOBILE
@@ -228,7 +222,6 @@
 @media (max-width: 900px) {
   .mytasks-card {
     height: auto;
-    max-height: none;
   }
 
   .mytasks-body {
@@ -238,25 +231,5 @@
   .mytasks-left {
     border-right: none;
     border-bottom: 1px solid #eee;
-    height: auto;
-  }
-
-  .mytasks-right {
-    height: auto;
   }
 }
-
-.panel-title {
-  color: #bb0202;
-
-  font-weight: 700;
-  letter-spacing: 0.5px;
-
-  /* position */
-  margin-left: 24px;           /* right side ki move */
-  margin-bottom: 16px;
-
-  /* clean look */
-  opacity: 0.95;
-}
-

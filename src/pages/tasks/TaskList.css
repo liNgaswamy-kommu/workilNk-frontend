@@ -15,6 +15,7 @@
   background: #ffffff;
   border-radius: 18px;
   padding: 28px 32px;
+  margin-top: 93px;
 
   box-shadow:
     0 20px 45px rgba(0, 0, 0, 0.35),
@@ -33,12 +34,22 @@
   font-size: 26px;
   color: var(--brand-red);
   margin-bottom: 6px;
+  margin-left: 280px;
 }
 
 .post-task-header p {
   font-size: 14px;
   color: #444;
 }
+
+.apply-btn.applied {
+  background: #e5e7eb;
+  color: #6b7280;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
 
 /* VIEW TASKS BTN */
 .my-tasks-btn {
@@ -131,8 +142,21 @@
 .form-actions {
   display: flex;
   gap: 14px;
-  margin-top: 24px;
+  margin-top: 20px;
 }
+
+.form-actions button {
+  flex: 1;                 /* 🔥 SAME WIDTH */
+  height: 54px;            /* 🔥 SAME HEIGHT */
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  margin-top: 4px;
+}
+
 
 .post-task-btn:hover {
   transform: translateY(-2px);
@@ -174,3 +198,153 @@
     gap: 12px;
   }
 }
+
+/* PAGE */
+.task-page {
+  padding: 120px 24px 40px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #2b0000, #000);
+}
+
+
+/* TITLE */
+.task-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #ff2d2d;
+}
+
+/* GRID */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+}
+
+/* CARD */
+.task-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(225, 29, 72, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 10px 55px rgba(225, 29, 71, 0.548),
+    0 0 0 1px rgba(225, 29, 72, 0.45);
+}
+
+
+/* HEADER */
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+
+.task-card-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+
+/* CATEGORY BADGE */
+.task-category-text {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #b30000;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.priority-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* HIGH */
+.priority-badge.high {
+  background: #ffeded;
+  color: #d60000;
+  box-shadow: 0 0 0 1px rgba(255, 0, 0, 0.25);
+}
+
+/* MEDIUM */
+.priority-badge.medium {
+  background: #fff7e6;
+  color: #b26a00;
+}
+
+/* LOW */
+.priority-badge.low {
+  background: #eef2ff;
+  color: #3949ab;
+}
+
+
+/* INFO */
+.task-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+}
+
+.posted-by {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* APPLY BUTTON */
+.apply-btn {
+  margin-top: 18px;
+  height: 46px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #ff1a1a, #b30000);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(255,0,0,0.55);
+}
+
+/* EMPTY */
+.no-tasks {
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .task-title {
+    font-size: 22px;
+  }
+}
+

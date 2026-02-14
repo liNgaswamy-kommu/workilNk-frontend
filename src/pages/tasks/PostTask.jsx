@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { createTask, updateTask, deleteTask } from "../../services/taskApi";
 import { formSuccess } from "../../utils/alert";
+import { confirmDelete } from "../../utils/alert";
 import TaskCategorySelect from "../../components/TaskCategorySelect/TaskCategorySelect";
 import OSMLocationInput from "../../components/OSMLocationInput";
 import "./Tasks.css";
@@ -100,19 +101,21 @@ function PostTask() {
      DELETE
   ========================= */
   const handleDelete = async () => {
-    if (!window.confirm("Delete this task?")) return;
+  const confirmed = await confirmDelete();
+  if (!confirmed) return;
 
-    try {
-      setLoading(true);
-      await deleteTask(editingTask.id);
-      formSuccess("Task deleted 🗑️");
-      navigate("/tasks/me");
-    } catch (e) {
-      setError(e.message || "Delete failed");
-    } finally {
-      setLoading(false);
-    }
-  };
+  try {
+    setLoading(true);
+    await deleteTask(editingTask.id);
+    formSuccess("Task deleted 🗑️");
+    navigate("/tasks/me");
+  } catch (e) {
+    setError(e.message || "Delete failed");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   /* =========================
      UI

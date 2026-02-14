@@ -51,6 +51,32 @@ export const confirmLogout = async () => {
   return res.isConfirmed;
 };
 
+/* ================= DELETE CONFIRM ================= */
+
+export const confirmDelete = async () => {
+  const result = await Swal.fire({
+    title: "Delete this task?",
+    text: "This action cannot be undone",
+    icon: "warning",
+    showCancelButton: true,
+
+    confirmButtonText: "Yes, delete",
+    cancelButtonText: "Cancel",
+
+    reverseButtons: true,
+
+    confirmButtonColor: "#dc2626", // 🔴 red
+    cancelButtonColor: "#0bfa03",  
+
+    focusCancel: true,
+  });
+
+  return result.isConfirmed;
+};
+
+
 /* aliases */
 export const toastSuccess = formSuccess;
 export const toastError = formError;
+
+

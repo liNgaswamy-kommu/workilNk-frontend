@@ -1,0 +1,104 @@
+.application-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: all 0.25s ease;
+}
+
+.application-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.worker-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111;
+}
+
+.bid {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b30000;
+  margin-top: 2px;
+}
+
+.app-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* STATUS */
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status-badge.applied {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.status-badge.accepted {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* MINI ACTIONS */
+.mini-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.mini-accept,
+.mini-reject {
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ACCEPT */
+.mini-accept {
+  background: #16a34a;
+  color: #fff;
+}
+
+.mini-accept:hover {
+  background: #15803d;
+}
+
+/* REJECT */
+.mini-reject {
+  background: #dc2626;
+  color: #fff;
+}
+
+.mini-reject:hover {
+  background: #991b1b;
+}
+
+.message {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #444;
+  font-style: italic;
+}
